@@ -1,5 +1,6 @@
 $offset: 400px;
-$diameter: 200px;
+$diameter: 250px;
+$highlight-border-width: 15px;
 
 .ergonomicsDetailDiv {
 
@@ -8,6 +9,11 @@ $diameter: 200px;
     border-radius: 1000px;
     width: $diameter;
     height: $diameter;
+    border: $highlight-border-width solid transparent;
+
+    &:hover {
+      border: $highlight-border-width solid var(--accent-secondary);
+    }
 
     .descriptionCard {
       position: absolute;
