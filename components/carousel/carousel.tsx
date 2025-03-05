@@ -30,14 +30,10 @@ const carouselImages = [
 export function Carousel() {
   const [globalY] = useAtom(globalYAtom)
   const [carouselIndex, setCarouselIndex] = useState(0)
-
   const carouselMarker = useRef<HTMLDivElement>(null)
-
   const carouselPosition = useMotionValue(-1)
-
   const positionTransform = useTransform(carouselPosition, [-1, 0, 1], ["-100vw", "0vw", "100vw"])
   const translate = useSpring(positionTransform, {damping: 40, stiffness: 100})
-
   const rotationTransform = useTransform(carouselPosition, [-1, 0, 1], ["-270deg", "0deg", "270deg"])
   const rotate = useSpring(rotationTransform, {damping: 40, stiffness: 100})
 

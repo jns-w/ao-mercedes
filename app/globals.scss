@@ -2,11 +2,6 @@
 @use "@/styles/mixins/media";
 
 
-@theme {
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
 :root {
   --bg-primary: #dededf;
   --bg-secondary: #252931;

@@ -62,14 +62,6 @@ export function MastheadSection() {
             className={style.carImageOverlay}
             src="/images/sections/masthead/masthead_fore_img.png" alt="" width={2160} height={1289}/>
         </div>
-        {/*<div className={style.bgImageWrapperMobile}>*/}
-        {/*  <Image*/}
-        {/*    key="carImageMobile"*/}
-        {/*    className={style.carImageBaseMobile}*/}
-        {/*    src="/images/sections/masthead/mobile_masthead_back_img.jpg" alt="" width={500} height={750}/>*/}
-        {/*</div>*/}
-
-
 
       </section>
       <div className={style.mastheadPlaceholder}/>

@@ -46,7 +46,6 @@
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  //width: 1248px;
   width: 100%;
   height: var(--masthead-height);
   overflow: clip;
@@ -89,7 +88,6 @@
       height: 100%;
 
       &.rotate {
-        // animate rotation
         animation: rotate 5s linear infinite;
       }
     }
@@ -117,15 +115,6 @@
       object-position: center bottom;
       z-index: 1;
     }
-  }
-
-  @include media.query(tablet) {
-    .carImageBase {
-      //object-fit: cover;
-    }
-  }
-
-  @inlude media.query(mobile) {
   }
 }
 

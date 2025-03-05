@@ -11,12 +11,9 @@ export function SummarySection() {
   const summaryMarker = useRef<HTMLDivElement>(null)
 
   const progress = useMotionValue(0)
-
   const leftProgressTransform = useTransform(progress, [0, 1], ["-100vw", "0vw"])
   const rightProgressTransform = useTransform(progress, [0, 1], ["100vw", "0vw"])
-
   const leftTranslate = useSpring(leftProgressTransform, {damping: 40, stiffness: 300})
-
   const rightTranslate = useSpring(rightProgressTransform, {damping: 40, stiffness: 300})
 
   useEffect(() => {
@@ -24,13 +21,12 @@ export function SummarySection() {
     const top = summaryMarker.current.getBoundingClientRect().top;
     if (top < 1500) {
       console.log(top)
-      progress.set((1500-top)/600)
+      progress.set((1500 - top) / 600)
     }
 
   }, [globalY, progress]);
   return (
     <section ref={summaryMarker} className={style.summarySection}>
-
       <motion.div
         className={style.cardWrapper}
         style={{
@@ -52,25 +48,23 @@ export function SummarySection() {
         />
 
       </motion.div>
-
       <motion.div
         className={style.cardWrapper}
         style={{
           translateX: rightTranslate,
         }}
       >
-
-      <SummaryCard
-        title={"What We Dislike"}
-        points={[
-          "Ridiculous $1 million price tag",
-          "Non-existent rear-wheel",
-          "steering",
-          "No soft-closing doors",
-          "Seriously overpriced",
-        ]}
-        anchor="right" imageSrc={"/images/sections/summary/footer_right_what_we_dislike.png"}
-      />
+        <SummaryCard
+          title={"What We Dislike"}
+          points={[
+            "Ridiculous $1 million price tag",
+            "Non-existent rear-wheel",
+            "steering",
+            "No soft-closing doors",
+            "Seriously overpriced",
+          ]}
+          anchor="right" imageSrc={"/images/sections/summary/footer_right_what_we_dislike.png"}
+        />
       </motion.div>
     </section>
   )

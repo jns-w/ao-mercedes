@@ -10,7 +10,6 @@ import { ErgonomicsSection } from "@/components/sections/ergonomics-section/ergo
 import { useEffect, useRef, useState } from "react";
 import { useMotionValueEvent, useScroll } from "framer-motion";
 import { globalYAtom } from "@/states/scroll";
-
 import { useAtom } from "jotai";
 import style from "./home.module.scss"
 import clsx from "clsx";
