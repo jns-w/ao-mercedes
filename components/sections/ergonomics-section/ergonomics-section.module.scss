@@ -1,3 +1,4 @@
+@use "@/styles/mixins/media";
 @use "@/styles/fonts/font-styles";
 
 .ergonomicsSection {
@@ -32,5 +33,22 @@
     display: grid;
     gap: 25px 20px;
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include media.query(tablet) {
+    .ergonomicsDetailsGrid {
+      grid-template-columns: 1fr;
+      width: var(--content-width);
+      padding: 0 50px;
+      gap: 0;
+
+      :nth-child(odd) {
+        justify-self: flex-start;
+      }
+
+      :nth-child(even) {
+        justify-self: flex-end;
+      }
+    }
   }
 }

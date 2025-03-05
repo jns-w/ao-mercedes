@@ -1,8 +1,11 @@
+@use "@/styles/mixins/media";
+
 $offset: 400px;
 $diameter: 250px;
 $highlight-border-width: 15px;
 
 .ergonomicsDetailDiv {
+  display: block;
 
   .ergonomicsDetailImageDiv {
     position: relative;
@@ -24,7 +27,7 @@ $highlight-border-width: 15px;
   &.leftAnchor {
     align-items: flex-end;
 
-    .ergonomicsDetailImageDiv>.descriptionCard {
+    .ergonomicsDetailImageDiv > .descriptionCard {
       left: -$offset;
     }
   }
@@ -32,8 +35,11 @@ $highlight-border-width: 15px;
   &.rightAnchor {
     align-items: flex-start;
 
-    .ergonomicsDetailImageDiv>.descriptionCard {
-        right: -$offset;
+    .ergonomicsDetailImageDiv > .descriptionCard {
+      right: -$offset;
     }
   }
+
+
+
 }
