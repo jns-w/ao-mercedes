@@ -29,10 +29,10 @@
     --masthead-height: 550px;
   }
 
-  @include media.query(mobile) {
-    --content-width: 300px;
-    --masthead-height: 700px;
-  }
+  //@include media.query(mobile) {
+  //  --content-width: 300px;
+  //  --masthead-height: 700px;
+  //}
 }
 
 
