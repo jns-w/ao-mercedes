@@ -6,58 +6,81 @@ $title-div-height: 65px;
 .titleCardWrapper {
   width: 100%;
   z-index: 10;
-}
 
-.titleDiv {
-  display: flex;
-  align-items: center;
-  position: relative;
-  width: 100%;
-  height: fit-content;
-  z-index: 3;
-  transform: translateY(70px);
-
-  overflow: clip;
-
-  .titleCard {
+  .titleDiv {
     display: flex;
-    justify-content: flex-end;
-    width: 70%;
-    height: $title-div-height;
-    background-color: var(--accent-secondary);
-    clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 100%, 0 100%);
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    z-index: 3;
+    transform: translateY(70px);
 
-    h2 {
-      @include font-styles.header2;
-      color: var(--text-secondary);
-      margin-right: 15%;
+    overflow: clip;
+
+    .titleCard {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      width: 75%;
+      height: $title-div-height;
+      background-color: var(--accent-secondary);
+      clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 100%, 0 100%);
+
+      h2 {
+        @include font-styles.header2;
+        color: var(--text-secondary);
+        margin-right: 12%;
+      }
     }
   }
-}
 
-.quoteDiv {
-  display: flex;
-  width: 100%;
-  height: fit-content;
-  justify-content: flex-end;
-  transform: translateY(60px);
-  z-index: 2;
-
-  overflow: clip;
-
-  .quoteCard {
+  .quoteDiv {
     display: flex;
-    justify-content: flex-start;
-    width: 75%;
-    background-color: rgba(225, 165, 32, 0.8);
-    padding: 30px 0;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 42px 100%);
+    width: 100%;
+    height: fit-content;
+    justify-content: flex-end;
+    transform: translateY(60px);
+    z-index: 2;
 
-    p {
-      @include font-styles.body;
-      margin-left: 10%;
-      width: 650px;
-      color: var(--text-primary);
+    overflow: clip;
+
+    .quoteCard {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: 75%;
+      background-color: rgba(225, 165, 32, 0.8);
+      padding: 30px 0;
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 42px 100%);
+
+      p {
+        @include font-styles.body;
+        margin-left: 10%;
+        width: 650px;
+        color: var(--text-primary);
+      }
+    }
+  }
+
+  @include media.query(tablet) {
+    .titleDiv {
+      .titleCard {
+        width: 95%;
+
+        h2 {
+          @include font-styles.header3;
+          margin-right: 15%;
+        }
+      }
+
+    }
+
+    .quoteDiv {
+
+      .quoteCard {
+        width: 95%;
+      }
     }
   }
 }
