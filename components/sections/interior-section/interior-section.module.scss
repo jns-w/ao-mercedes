@@ -16,7 +16,6 @@ $title-div-height: 65px;
 }
 
 
-
 .quoteDiv {
   display: flex;
   width: 100%;
@@ -49,17 +48,21 @@ $title-div-height: 65px;
   justify-content: center;
   width: 100%;
 
-  .translucentCardScreen {
-    top: 50px;
-    width: 830px;
-    z-index: 2;
+  .translucentCard {
+
+    &.screen {
+      top: 50px;
+      width: 830px;
+      z-index: 2;
+    }
+
+    &.seat {
+      top: 150px;
+      width: 600px;
+      z-index: 2;
+    }
   }
 
-  .translucentCardSeat {
-    top: 150px;
-    width: 600px;
-    z-index: 2;
-  }
 
   .bgImageWrapper {
     position: relative;
@@ -76,9 +79,24 @@ $title-div-height: 65px;
       object-fit: cover;
       object-position: center center;
     }
+  }
 
-    @include media.query(tablet) {
+  @include media.query(tablet) {
+    .bgImageWrapper {
       height: 550px;
+    }
+    .translucentCard {
+      &.screen {
+        top: 60px;
+        width: 500px;
+      }
+    }
+
+    .translucentCard {
+      &.seat {
+        top: 150px;
+        width: 440px;
+      }
     }
   }
 }

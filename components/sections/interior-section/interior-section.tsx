@@ -3,6 +3,7 @@ import style from "./interior-section.module.scss"
 import { BubbleCard } from "@/components/cards/bubble-card/bubble-card";
 import { TitleCard } from "@/components/cards/title-card/title-card";
 import { TranslucentCard } from "@/components/cards/translucent-card/translucent-card";
+import clsx from "clsx";
 
 export function InteriorSection() {
 
@@ -17,7 +18,7 @@ export function InteriorSection() {
       <section className={style.interiorSubSection}>
 
         <TranslucentCard
-          className={style.translucentCardScreen}
+          className={clsx(style.translucentCard, style.screen)}
         >
           <p>Yes, there are still screens. But instead of the usual MBUX (Mercedes-Benz User Experience) setup, the
             12.3-inch instrument panel is housed under a cowl, reflecting the SL&#39;s sporty roots.</p>
@@ -54,7 +55,7 @@ export function InteriorSection() {
         {/*    PHOTO: sCarMart*/}
         {/*  </p>*/}
         {/*</BubbleCard>*/}
-        <TranslucentCard className={style.translucentCardSeat}>
+        <TranslucentCard className={clsx(style.translucentCard, style.seat)}>
           <p>For the first time in the SL&#39;s history, the car has rear seats. They can supposedly accommodate
             occupants up to 1.5m tall, but the backrests are so upright they seem like they are canted forward.</p>
           <p>Also, strangely absent on the test unit are soft-close doors and &#39;pushers&#39; that bring the seat
