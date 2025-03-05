@@ -1,0 +1,18 @@
+.carouselDotsDiv {
+  position: absolute;
+  bottom: 9%;
+  z-index: 200;
+
+  .carouselDot {
+    width: 8px;
+    height: 8px;
+    border-radius: 1000px;
+    background-color: var(--text-secondary);
+    margin: 5px;
+    cursor: pointer;
+
+    &.active {
+      background-color: var(--accent-primary);
+    }
+  }
+}

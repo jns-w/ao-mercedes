@@ -1,0 +1,11 @@
+.sectionsDiv {
+  width: 100%;
+  position: fixed;
+  top: var(--masthead-height);
+  height: auto;
+
+  &.relative {
+    position: relative;
+    top: 0;
+  }
+}

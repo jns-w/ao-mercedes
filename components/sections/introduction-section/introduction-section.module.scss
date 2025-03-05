@@ -1,0 +1,58 @@
+@use "@/styles/fonts/font-styles";
+
+.introductionSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--bg-secondary);
+  height: fit-content;
+  width: 100%;
+  color: var(--text-secondary);
+  padding: 80px 0;
+  overflow: clip;
+
+  .contentWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: var(--content-width);
+  }
+
+  .titleDiv {
+    display: flex;
+    width: fit-content;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+      @include font-styles.header5;
+      color: var(--accent-secondary);
+
+      span {
+        color: var(--brown);
+      }
+    }
+
+    .timestamp {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--brown2);
+    }
+
+    hr {
+      width: 100%;
+      border: 1px solid var(--brown2);
+      margin: 10px 0;
+    }
+  }
+
+  .contentDiv {
+    margin-bottom: 80px;
+    p {
+      @include font-styles.body;
+      margin-top: 30px;
+    }
+  }
+
+}

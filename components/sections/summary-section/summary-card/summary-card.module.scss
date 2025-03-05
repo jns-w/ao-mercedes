@@ -1,0 +1,102 @@
+@use "@/styles/fonts/font-styles";
+@use "@/styles/mixins/media";
+
+$list-padding: 100px;
+
+.summaryCardDiv {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--accent-translucent);
+  color: var(--text-primary);
+  width: 100%;
+  justify-content: center;
+  padding: 30px 0;
+
+  h2 {
+    @include font-styles.header4;
+    color: var(--text-secondary);
+  }
+
+  ul {
+    margin-top: 20px;
+    list-style-type: disc;
+    list-style-position: inside;
+
+    li {
+      @include font-styles.body;
+      line-height: 1.5;
+
+      &::marker {
+        color: var(--accent-primary);
+        font-size: 25px;
+        line-height: 0;
+      }
+    }
+  }
+
+  .image {
+    position: absolute;
+    width: 300px;
+  }
+
+  &.leftAnchor {
+    align-items: flex-end;
+    border-radius: 0 1000px 1000px 0;
+    padding-right: $list-padding;
+
+    ul {
+      direction: rtl;
+    }
+
+    .image {
+      left: 0;
+    }
+  }
+
+  &.rightAnchor {
+    align-items: flex-start;
+    border-radius: 1000px 0 0 1000px;
+    padding-left: $list-padding;
+
+    ul {
+      direction: ltr;
+    }
+
+    .image {
+      right: 0;
+    }
+  }
+
+  @include media.query(tablet) {
+    width: auto;
+
+    &.leftAnchor {
+      margin-right: 100px;
+    }
+
+    &.rightAnchor {
+      margin-left: 100px;
+      transform: translateY(-30px);
+    }
+
+    .image {
+      width: 200px;
+    }
+  }
+
+  @include media.query(mobile) {
+    .image {
+      position: relative;
+    }
+
+    &.leftAnchor {
+      margin-right: 0;
+    }
+
+    &.rightAnchor {
+      margin-left: 0;
+    }
+  }
+
+}

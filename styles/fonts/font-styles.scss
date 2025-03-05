@@ -1,0 +1,35 @@
+/** Font styles
+  * @description Common styles are consolidated here for easy access
+  * and designed for flexibility in the event of a design change.
+  * @example @include font-styles.header1;
+ */
+
+@mixin header1 {
+  font-size: 55px;
+  font-weight: 800;
+}
+
+@mixin header2 {
+  font-size: 40px;
+  font-weight: 800;
+}
+
+@mixin header3 {
+  font-size: 30px;
+  font-weight: 800;
+}
+
+@mixin header4 {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+@mixin header5 {
+  font-size: 20px;
+  font-weight: 800;
+}
+
+@mixin body {
+  font-size: 16px;
+  font-weight: 600;
+}

@@ -1,0 +1,14 @@
+$diameter: 170px;
+
+.bubbleCardDiv {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--card);
+  color: var(--text-secondary);
+  border-radius: 1000px;
+  padding: 50px;
+  width: $diameter;
+  height: $diameter;
+  overflow: clip;
+  font-size: 13px;
+}

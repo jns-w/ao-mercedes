@@ -1,0 +1,13 @@
+@use "@/styles/fonts/font-styles";
+
+.translucentCard {
+  position: absolute;
+  background-color: var(--translucent-card);
+  color: var(--text-secondary);
+  padding: 40px 50px;
+
+  p {
+    @include font-styles.body;
+    margin-top: 30px;
+  }
+}

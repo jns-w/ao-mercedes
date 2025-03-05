@@ -1,0 +1,78 @@
+@use "@/styles/mixins/media";
+@use "@/styles/fonts/font-styles";
+
+.pedigreeSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  padding: 80px 0 0 0 ;
+
+  .contentWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: var(--content-width);
+  }
+
+  h2 {
+    @include font-styles.header2;
+  }
+}
+
+.pedigreeSubSection {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  margin: 30px 0 30px 0;
+
+  .textDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 60%;
+
+    p {
+      @include font-styles.body;
+      color: var(--brown2);
+      margin-bottom: 20px;
+    }
+  }
+
+  .imageDiv {
+    position: relative;
+    border-radius: 1000px;
+    overflow: clip;
+    width: 300px;
+    height: 300px;
+
+    .titleCard {
+      position: absolute;
+      background-color: var(--accent-secondary);
+      color: var(--text-secondary);
+      top: 25px;
+      padding-top: 6px;
+      padding-bottom: 6px;
+
+      h3 {
+        font-size: 16px;
+        font-weight: 600;
+      }
+
+      &.anchorRight {
+        right: 0;
+        border-radius: 100px 0 0 100px;
+        padding-right: 70px;
+        padding-left: 30px;
+      }
+
+      &.anchorLeft {
+        left: 0;
+        border-radius: 0 100px 100px 0;
+        padding-right: 30px;
+        padding-left: 70px;
+      }
+    }
+  }
+}

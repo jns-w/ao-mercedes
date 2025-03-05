@@ -1,0 +1,25 @@
+@mixin query($breakpoint) {
+  @if $breakpoint == mobile {
+    @media (width <= 560px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tablet {
+    @media (width <= 810px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == standard {
+    @media (width >= 1248px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == large {
+    @media (width > 1500px) {
+      @content;
+    }
+  }
+}

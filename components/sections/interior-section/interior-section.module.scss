@@ -1,0 +1,84 @@
+@use "@/styles/mixins/media";
+@use "@/styles/fonts/font-styles";
+
+$title-div-height: 65px;
+
+.interiorSection {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  background-color: var(--bg-primary);
+
+  .titleCard {
+    transform: translateY(38px);
+  }
+}
+
+
+
+.quoteDiv {
+  display: flex;
+  width: 100%;
+  height: fit-content;
+  justify-content: flex-end;
+  transform: translateY(60px);
+  z-index: 2;
+
+  .quoteCard {
+    display: flex;
+    justify-content: flex-start;
+    width: 75%;
+    background-color: rgba(225, 165, 32, 0.8);
+    padding: 30px 0;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 42px 100%);
+
+    p {
+      @include font-styles.body;
+      margin-left: 10%;
+      width: 650px;
+      color: var(--text-primary);
+    }
+  }
+}
+
+
+.interiorSubSection {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  .translucentCardScreen {
+    top: 50px;
+    width: 830px;
+    z-index: 2;
+  }
+
+  .translucentCardSeat {
+    top: 150px;
+    width: 600px;
+    z-index: 2;
+  }
+
+  .bgImageWrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 745px;
+    width: 100%;
+    overflow: clip;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+
+    @include media.query(tablet) {
+      height: 550px;
+    }
+  }
+}

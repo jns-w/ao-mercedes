@@ -1,0 +1,36 @@
+@use "@/styles/fonts/font-styles";
+
+.ergonomicsSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 500px;
+
+  .titleCard {
+    transform: translateY(-125px);
+  }
+
+  .contentDiv {
+    width: var(--content-width);
+
+    p {
+      @include font-styles.body;
+      margin-bottom: 16px;
+    }
+  }
+}
+
+.ergonomicsDetailsDiv {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 70px 0;
+
+  .ergonomicsDetailsGrid {
+    display: grid;
+    gap: 25px 20px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

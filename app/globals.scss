@@ -1,0 +1,51 @@
+@use "tailwindcss";
+@use "@/styles/mixins/media";
+
+
+@theme {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+:root {
+  --bg-primary: #dededf;
+  --bg-secondary: #252931;
+  --text-primary: #000000;
+  --text-secondary: #ffffff;
+  --text-title: #262A31;
+  --accent-primary: #E1A520;
+  --accent-secondary: #C18500;
+  --accent-translucent: rgba(193, 133, 0, 0.85);
+  --brown: #5F4112;
+  --brown2: #695E3E;
+  --card: #656F80;
+  --translucent-card: rgba(0, 0, 0, 0.5);
+
+  --content-width: 800px;
+  --masthead-height: 745px;
+
+  @include media.query(tablet) {
+    --content-width: 550px;
+    --masthead-height: 550px;
+  }
+
+  @include media.query(mobile) {
+    --content-width: 300px;
+    --masthead-height: 700px;
+  }
+}
+
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  color: var(--text-primary);
+  background: var(--bg-secondary);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}

@@ -1,0 +1,36 @@
+@use "@/styles/fonts/font-styles";
+
+.featuresSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--bg-secondary);
+  color: var(--text-secondary);
+  width: 100%;
+  padding: 100px 0;
+
+  .contentDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: var(--content-width);
+
+    h2 {
+      @include font-styles.header2;
+      color: var(--accent-primary);
+      align-self: flex-start;
+    }
+
+    p {
+      @include font-styles.body;
+      margin-top: 30px;
+    }
+
+    .videoWrapper {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+    }
+  }
+
+}

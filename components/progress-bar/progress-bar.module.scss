@@ -1,0 +1,53 @@
+$car-width: 200px;
+
+.progressBarWrapper {
+  position: fixed;
+  bottom: 0;
+  width: calc(100% - $car-width);
+  height: 80px;
+  left: 0;
+  z-index: 10;
+
+  .progressBarDiv {
+    position: relative;
+    width: 100%;
+    background-color: var(--brown2);
+    border-radius: 5px;
+
+    .progressTrackDiv {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      left: 0;
+      top: 33px;
+      gap: 2px;
+    }
+
+    .progressTrack1 {
+      background-color: var(--card);
+      opacity: .7;
+      left: 0;
+      height: 2px;
+      width: 100%;
+    }
+
+    .progressTrack2 {
+      background-color: var(--card);
+      opacity: .5;
+      left: 0;
+      height: 12px;
+      width: 100%;
+    }
+
+    .progressCarDiv {
+      position: absolute;
+      width: $car-width;
+      left: 0;
+      transform: translateX(-4px);
+
+      img {
+        width: 200px;
+      }
+    }
+  }
+}

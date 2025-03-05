@@ -1,0 +1,20 @@
+@use "@/styles/fonts/font-styles";
+
+.translucentBubbleDiv {
+  display: flex;
+  gap: 25px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  background-color: var(--translucent-card);
+  color: var(--text-secondary);
+  border-radius: 1000px;
+  width: 300px;
+  height: 300px;
+  text-align: center;
+
+  h2 {
+    @include font-styles.header4;
+  }
+}

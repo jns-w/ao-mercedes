@@ -1,0 +1,86 @@
+.navMenusDiv {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  right: 50px;
+  z-index: 100;
+
+  .navMenuBtn, .shareMenuBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background-color: var(--card);
+    color: var(--text-secondary);
+    cursor: pointer;
+  }
+
+  .navMenuBtn {
+
+  }
+
+  .shareMenuBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    padding-bottom: 12px;
+    border-radius: 0 0 100px 100px;
+
+    .shareIcon {
+      display: block;
+    }
+
+    .arrowUpIcon {
+      display: none;
+    }
+
+    &.expanded {
+      .shareIcon {
+        display: none;
+      }
+
+      .arrowUpIcon {
+        display: block;
+      }
+    }
+  }
+
+  .shareMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2px;
+    background-color: var(--card);
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s ease-out;
+
+    .shareMenuItem {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 2px 0 2px 0;
+
+      svg {
+        color: var(--text-title);
+      }
+
+      &:first-child {
+        margin-top: 8px;
+      }
+
+      &:last-child {
+        margin-bottom: 8px;
+      }
+
+    }
+
+    &.expanded {
+      height: 160px;
+    }
+
+  }
+}
