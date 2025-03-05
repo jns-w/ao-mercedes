@@ -1,4 +1,4 @@
-# Mercedes-Benz Parallex Mock Project
+# Mercedes-Benz Parallax Mock Project
 
 ## Installation
 
